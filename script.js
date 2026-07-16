@@ -1,13 +1,80 @@
-// Shah Online Mart
+// Shah Online Mart JavaScript
 
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Shah Online Mart Website Loaded!");
 
-  const btn = document.querySelector(".btn");
+let cart = [];
 
-  if (btn) {
-    btn.addEventListener("click", function () {
-      alert("ধন্যবাদ! আপনাকে WhatsApp-এ নিয়ে যাওয়া হচ্ছে...");
+
+// Add To Cart Function
+
+function addCart(productName){
+
+    cart.push(productName);
+
+    alert(productName + " added to cart!");
+
+    console.log(cart);
+
+}
+
+
+
+
+// WhatsApp Order Function
+
+function orderWhatsApp(product){
+
+    let phone = "8801XXXXXXXXX";
+
+    let message = 
+    "Hello Shah Online Mart,%0A%0A" +
+    "I want to order: " + product;
+
+
+    let url = 
+    "https://wa.me/" + phone + "?text=" + message;
+
+
+    window.open(url, "_blank");
+
+}
+
+
+
+
+// Smooth Scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+
+    anchor.addEventListener("click", function(e){
+
+
+        e.preventDefault();
+
+
+        document.querySelector(this.getAttribute("href"))
+        .scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+
     });
-  }
+
+
 });
+
+
+
+
+
+// Welcome Message
+
+window.onload = function(){
+
+    console.log(
+    "Welcome To Shah Online Mart"
+    );
+
+}
