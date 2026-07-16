@@ -1,170 +1,4 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Shah Online Mart</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-
-<body>
-
-
-<header>
-
-<div class="logo">
-Shah Online Mart
-</div>
-
-
-<nav>
-
-<a href="#home">Home</a>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-</header>
-
-
-
-<section class="hero" id="home">
-
-
-<div>
-
-<h1>
-Welcome To Shah Online Mart
-</h1>
-
-
-<p>
-Premium Quality Products At Best Price
-</p>
-
-
-<button>
-Shop Now
-</button>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section id="products">
-
-
-<h2>
-Our Products
-</h2>
-
-
-<div class="product-container">
-
-
-
-<div class="product">
-
-
-<img src="images/product1.jpg">
-
-
-<h3>
-Premium Churi
-</h3>
-
-
-<p>
-Price: ৳499
-</p>
-
-
-<button onclick="addCart('Premium Churi')">
-Add To Cart
-</button>
-
-
-</div>
-
-
-
-
-<div class="product">
-
-
-<img src="images/product2.jpg">
-
-
-<h3>
-Fashion Item
-</h3>
-
-
-<p>
-Price: ৳699
-</p>
-
-
-<button onclick="addCart('Fashion Item')">
-Add To Cart
-</button>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section id="about">
-
-
-<h2>
-About Us
-</h2>
-
-
-<p>
-
-Shah Online Mart is a trusted online shopping platform.
-We provide quality products with fast delivery.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
 <section id="contact">
-
 
 <h2>
 Contact Us
@@ -172,34 +6,51 @@ Contact Us
 
 
 <p>
-WhatsApp: 01XXXXXXXXX
+WhatsApp: 01918548788
 </p>
 
 
-<p>
-Facebook: Shah Online Mart
-</p>
+<a href="https://wa.me/8801918548788" target="_blank">
+<button>
+WhatsApp Order
+</button>
+</a>
+
+
+<br><br>
+
+
+<a href="https://www.facebook.com/share/1EjZ1uPsGP/" target="_blank">
+<button>
+Facebook Page
+</button>
+</a>
+
+
+<br><br>
+
+
+<a href="https://www.tiktok.com/@shah_online_gadgets" target="_blank">
+<button>
+TikTok Account
+</button>
+</a>
 
 
 </section>
+function orderWhatsApp(product){
+
+    let phone = "8801918548788";
+
+    let message = 
+    "Hello Shah Online Mart,%0A%0A" +
+    "I want to order: " + product;
 
 
+    let url = 
+    "https://wa.me/" + phone + "?text=" + message;
 
 
+    window.open(url, "_blank");
 
-
-<footer>
-
-<p>
-© 2026 Shah Online Mart | All Rights Reserved
-</p>
-
-</footer>
-
-
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+}
